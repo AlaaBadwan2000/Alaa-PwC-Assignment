@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  color: azure;
+}
+
+#map {
+  height: 500px;
+  width: 800px;
+  margin-left: 280px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-left: 280px;
+}
+
+#city {
+  height: 30px;
+  width: 250px;
+  color: orange;
+  font-weight: bolder;
+  border: 1px solid orange;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visability 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: orange;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.button {
+  background-color: orange;
+  color: azure;
+  font-weight: bolder;
+  height: 40px;
+  width: 150px;
+}
+
+form > button > .hide {
+  display: none;
+}
